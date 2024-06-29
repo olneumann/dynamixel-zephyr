@@ -23,6 +23,8 @@
 #define WINDECLSPEC
 #elif defined(__APPLE__)
 #define WINDECLSPEC
+#elif defined(__ZEPHYR__)
+#define WINDECLSPEC
 #elif defined(_WIN32) || defined(_WIN64)
   #ifdef WINDLLEXPORT
   #define WINDECLSPEC __declspec(dllexport)
@@ -44,8 +46,8 @@
 
 static const int DEFAULT_BAUDRATE = 57600;
 
-int     g_used_port_num;
-uint8_t    *g_is_using;
+extern int     g_used_port_num;
+extern uint8_t    *g_is_using;
 
 WINDECLSPEC int     portHandler             (const char *port_name);
 

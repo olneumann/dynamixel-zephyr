@@ -1,11 +1,7 @@
-#ifndef PORT_HANDLER_ZEPHYR_H_
-#define PORT_HANDLER_ZEPHYR_H_
+#ifndef DYNAMIXEL_SDK_INCLUDE_DYNAMIXEL_SDK_ZEPHYR_PORTHANDLERZEPHYR_C_H_
+#define DYNAMIXEL_SDK_INCLUDE_DYNAMIXEL_SDK_ZEPHYR_PORTHANDLERZEPHYR_C_H_
 
 #include <stdint.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 int     portHandlerZephyr         (const char *port_name);
 
@@ -28,7 +24,4 @@ void    setPacketTimeoutZephyr    (int port_num, uint16_t packet_length);
 void    setPacketTimeoutMSecZephyr(int port_num, double msec);
 uint8_t isPacketTimeoutZephyr     (int port_num);
 
-#ifdef __cplusplus
-}
-#endif
-#endif // PORT_HANDLER_ZEPHYR_H_
+#endif // DYNAMIXEL_SDK_INCLUDE_DYNAMIXEL_SDK_ZEPHYR_PORTHANDLERZEPHYR_C_H_

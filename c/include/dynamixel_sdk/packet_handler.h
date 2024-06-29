@@ -19,7 +19,6 @@
 #ifndef DYNAMIXEL_SDK_INCLUDE_DYNAMIXEL_SDK_PACKETHANDLER_C_H_
 #define DYNAMIXEL_SDK_INCLUDE_DYNAMIXEL_SDK_PACKETHANDLER_C_H_
 
-
 #include <stdio.h>
 #include <stdint.h>
 #include "robotis_def.h"
@@ -79,7 +78,7 @@ typedef struct
   uint8_t     *broadcast_ping_id_list;
 }PacketData;
 
-PacketData *packetData;
+extern PacketData *packetData;
 
 WINDECLSPEC void        packetHandler       ();
 

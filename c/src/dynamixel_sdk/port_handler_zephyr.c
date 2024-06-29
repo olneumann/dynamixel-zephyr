@@ -1,10 +1,13 @@
+#if defined(__ZEPHYR__)
+
 #include "port_handler_zephyr.h"
 
-#include <kernel.h>
-#include <device.h>
+#include <zephyr/kernel.h>
+#include <zephyr/device.h>
+#include <zephyr/drivers/uart.h>
+
 #include <stdbool.h>
 #include <string.h>
-#include <drivers/uart.h>
 
 #define DYNAMIXEL_BUS_NUMS CONFIG_DYNAMIXEL_BUS_NUMS
 
@@ -71,11 +74,12 @@ void closePortZephyr(int port_num)
 
 void clearPortZephyr(int port_num)
 {
+    return;
 }
 
 void setPortNameZephyr(int port_num, const char *port_name)
 {
-    return 0;
+    return;
 }
 
 char *getPortNameZephyr(int port_num)
@@ -110,12 +114,12 @@ int writePortZephyr(int port_num, uint8_t *packet, int length)
 
 void setPacketTimeoutZephyr(int port_num, uint16_t packet_length)
 {
-    return 0;
+    return;
 }
 
 void setPacketTimeoutMSecZephyr(int port_num, double msec)
 {
-    return 0;
+    return;
 }
 
 uint8_t isPacketTimeoutZephyr(int port_num)
@@ -123,3 +127,4 @@ uint8_t isPacketTimeoutZephyr(int port_num)
     return 0;
 }
 
+#endif // __ZEPHYR__
