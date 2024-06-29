@@ -10,7 +10,7 @@ zephyr_include_directories(
     ${DXL_SDK_BASEl}/c/include/dynamixel_sdk
 )
 
-zpehyr_sources(
+zephyr_sources(
     ${DXL_SDK_BASEl}/c/src/dynamixel_sdk/group_bulk_read.c
     ${DXL_SDK_BASEl}/c/src/dynamixel_sdk/group_bulk_write.c
     ${DXL_SDK_BASEl}/c/src/dynamixel_sdk/group_sync_read.c
