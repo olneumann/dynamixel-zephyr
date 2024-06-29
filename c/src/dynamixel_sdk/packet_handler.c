@@ -37,6 +37,10 @@
 #include "protocol2_packet_handler.h"
 #endif
 
+PacketData    *packetData;
+int            g_used_port_num;
+uint8_t       *g_is_using;
+
 void packetHandler()
 {
   int port_num;
